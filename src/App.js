@@ -20,7 +20,7 @@ function App() {
     <>
     <div className="App">
     <Header />  
-      
+     <videoSection currentvideo=(currentvideo) 
     </div>
     </>
   );
