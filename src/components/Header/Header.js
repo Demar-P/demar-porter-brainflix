@@ -14,7 +14,7 @@ function Header() {
                     <img className="header__logo" src={logo} alt="brainflixlogo" />
                 </div>
                 <div className="header__search-container">
-                <input className="header__search" type="text" placeHolder="search">
+                <input className="header__search" type="text" >
                     </input>
                     <img className="header__image" src={headerImage} alt="" />
                 </div>

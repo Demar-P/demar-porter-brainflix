@@ -1,0 +1,11 @@
+.new-video {
+    &__img {}
+}
+
+.next-video {
+    &__img {
+        &--item {}
+    }
+
+    &__text {}
+}

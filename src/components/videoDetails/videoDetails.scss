@@ -1,0 +1,31 @@
+@use '../../styles/partials/colors' as *;
+
+.video-description{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    &__channel{
+
+    }
+    &__description{
+        border-bottom: 1px solid $mercury;
+
+    }
+    &__info{
+        border-bottom: 1px solid $mercury;
+    }
+
+    &__like{
+
+    }
+    &__time{
+
+    }
+    &__title{
+
+    }
+    &__views{
+
+    }
+}
+

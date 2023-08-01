@@ -1,0 +1,10 @@
+.video{
+    display: flex;
+    margin: 1rem;
+    &__player{
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        
+    }
+}
