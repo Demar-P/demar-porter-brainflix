@@ -15,12 +15,14 @@ function App() {
     const foundVideo = videoDetails.find(video => nextVideo.id === video.id)
     setCurrentVideo(foundVideo);
   }
+  
 
     const filterVideos = videos.filter(video => video.id );
   return(
     <>
       <Header />  
       <VideoInfo currentVideo={currentVideo} filterVideos={filterVideos} handleNextVideo={handleNextvideo} />
+      
     </>
   );
 }

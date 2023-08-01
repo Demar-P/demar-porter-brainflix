@@ -13,6 +13,7 @@ const videoDetails =({title, channel, timestamp, views, likes, description}) => 
         </div>
         <p className="video-description__description">{description}</p>
         </div>
+        
         </>
     )
 }

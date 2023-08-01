@@ -9,6 +9,7 @@ const VideoInfo = ({currentVideo, filteredVideo, handleNextVideo}) => {
         <VideoPlayer currentVideo={currentVideo} />
         <VideoDetails title={currentVideo.title} channel={currentVideo.channel} time={currentVideo.timestamp} views={currentVideo.views} likes={currentVideo.likes} description={currentVideo.description}/>
         <NextVideos filteredVideos={filteredVideo} handleNextVideo={handleNextVideo} />
+        
         </div>
         </>
 
