@@ -4,26 +4,27 @@ import './App.scss';
 import Header from './components/Header/Header';
 import videos from "./data/videos.json";
 import videoDetails from "./data/video-details.json"
+import VideoInfo from "./components/VideoSection/VideoSection";
 
 
 function App() {
 
-  const [current, setCurrentVideo] = useState(videoDetails[0]);
+  const [currentVideo, setCurrentVideo] = useState(videoDetails[0]);
 
   const handleNextvideo = nextVideo => {
-    const foundVideo = videoDetails.find(video => nextVideo.id ===video.id)
+    const foundVideo = videoDetails.find(video => nextVideo.id === video.id)
     setCurrentVideo(foundVideo);
   }
+  
 
-    const filterVideos = videos.filter(video => video.id )
-  return (
+    const filterVideos = videos.filter(video => video.id );
+  return(
     <>
-    <div className="App">
-    <Header />  
+      <Header />  
+      <VideoInfo currentVideo={currentVideo} filterVideos={filterVideos} handleNextVideo={handleNextvideo} />
       
-    </div>
     </>
   );
 }
 
-export default App;
+export default App; 
