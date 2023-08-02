@@ -1,4 +1,5 @@
 import './comment.scss'
+import CommentIcon from "../../assets/icons/add_comment.svg"
 
 
 const Comments = ({comments}) => {
@@ -6,9 +7,15 @@ const Comments = ({comments}) => {
     console.log('this is the comments component',comments)
     return (
         <div className="comment">
-        <h2 className="comment__title">Comment</h2>
-        <form />
-        {comments.map((comment) => (
+        <form>
+            <label htmlFor="comment" className="comments__label">Join the Conversation</label>
+                <textarea name="comment"id="comment" className="comments__input"placeholder="Add a new comment"></textarea>
+                    <button className="button button__comment" type="submit" />
+                    <img src={CommentIcon} alt="comment icon" className="button__comment-icon" />Comment
+                    <div className="button__comment-icon button--hidden"></div>    
+        </form>
+            <h2 className="comment__title">Comment</h2>
+            {comments.map((comment) => (
         <section key={comment.id} className="comment">
             <p className="comment__name">{comment.name}</p>
             <p className="comment__content">{comment.comment}</p>
