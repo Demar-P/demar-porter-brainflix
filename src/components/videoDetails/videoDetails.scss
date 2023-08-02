@@ -1,45 +1,56 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
 
-.video-description{
+.video-description {
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    @include margin(1.5rem,1rem, 1rem, 1rem);
+    @include margin(1.5rem, 1rem, 1rem, 1rem);
 
-    @include tablet{
-        @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-        @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-        };
-
-
-    &__channel{
-
+    @include tablet {
+        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
-    &__description{
+
+    ;
+
+
+    &__channel {}
+
+    &__description {
         flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid $mercury;
 
+        // Body Copy (small)
+        @mixin body-copy-small {
+            font-size: .8125rem;
+            line-height: 1.125rem;
+            font-weight: 700;
+
+            @include tablet {
+                font-size: .875rem;
+                line-height: 1.375rem;
+                font-weight: 400;
+            }
+        }
+
+
+
     }
-    &__info{
+
+    &__info {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid $mercury;
     }
 
-    &__like{
+    &__like {}
 
-    }
-    &__time{
+    &__time {}
 
-    }
-    &__title{
+    &__title {}
 
-    }
-    &__views{
-
-    }
+    &__views {}
 }
-

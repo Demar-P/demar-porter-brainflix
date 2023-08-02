@@ -4,5 +4,8 @@
 @use './components/videoDetails/videoDetails.scss' as *;
 @use './components/videoPlayer/VideoPlayer.scss' as *;
 @use './components/VideoSection/VideoSection.scss' as *;
+@use '../src/styles/partials/typography' as *;
 
-
+body {
+    font-family: Avenir;
+}
