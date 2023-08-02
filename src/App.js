@@ -11,14 +11,14 @@ function App() {
 
   const [currentVideo, setCurrentVideo] = useState(videoDetails[0]);
 
-  const handleNextvideo = nextVideo => {
-    const foundVideo = videoDetails.find(video => nextVideo.id === video.id)
+  const handleNextvideo = nextVideoID => {
+    const foundVideo = videoDetails.find(video => nextVideoID === video.id)
     setCurrentVideo(foundVideo);
   }
   
   // console.log(currentVideo)
 
-    const filterVideos = videos.filter(video => video.id );
+    const filterVideos = videos.filter(video => video.id !== currentVideo.id);
   return(
     <>
       <Header />  
