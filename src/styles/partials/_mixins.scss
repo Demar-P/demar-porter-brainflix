@@ -75,3 +75,62 @@
         font-weight: 700;}
     
 }
+
+
+
+// Subheader
+@mixin subheader {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+
+
+// LABELS & BUTTONS
+@mixin labels-buttons {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+
+
+// SECTION HEADER (small)
+@mixin section-header-small {
+  font-size: .75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  @include tablet{
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+  }
+
+}
+
+// Subheader (small)
+@mixin subheader-small {
+  font-size: .8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  @include tablet{
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 700;
+
+  }
+}
+
+// Body Copy (small)
+@mixin body-copy-small {
+  font-size: .8125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  @include tablet{
+    font-size: .875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+
