@@ -4,33 +4,45 @@
 
 
 .new-video {
-    @include margin(1.5rem,1rem, 1rem, 1rem);
+    display: flex;
+    flex-direction: row;
 
-    @include tablet{
-        @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-        @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-        };
-    
-    &__img {
-        
+    @include margin(1.5rem, 1rem, 1rem, 1rem);
+
+    @include tablet {
+        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
+
+    ;
+
+    &__img {}
 }
 
 .next-video {
     display: flex;
     flex-direction: column;
-    @include margin(1.5rem,1rem, 1rem, 1rem);
+    @include margin(1.5rem, 1rem, 1rem, 1rem);
 
-    @include tablet{
-        @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-        @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-        };
-    
-    &__img { 
+    @include tablet {
+        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+    }
+
+    ;
+
+    &__img {
         &--item {
             width: 100%;
         }
     }
 
     &__text {}
+
+    &__channel {}
+
+    &__title {}
 }
+
+
+

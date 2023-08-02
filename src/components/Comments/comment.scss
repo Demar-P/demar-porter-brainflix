@@ -6,26 +6,47 @@
 .comment {
     display: flex;
     flex-direction: column;
-    @include margin(1.5rem,1rem, 1rem, 1rem);
+    @include margin(1.5rem, 1rem, 1rem, 1rem);
 
-        @include tablet{
-            @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-            @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-            };
-
-    &__content {
-
+    @include tablet {
+        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
 
-    &__likes {
+    ;
 
+    &__content {}
+
+    &__likes {}
+
+    &__name {}
+
+    &__title {}
+
+    &__new {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.button {
+    &__comment {}
+
+    &__comment-icon {}
+
+    &--hidden {}
+}
+
+.comment {}
+
+.comments {
+    &__form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     }
 
-    &__name {
+    &__input {}
 
-    }
-
-    &__title {
-
-    }
+    &__label {}
 }
