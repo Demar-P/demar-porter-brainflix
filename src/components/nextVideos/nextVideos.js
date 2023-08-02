@@ -1,5 +1,5 @@
 import VideoItem from '../videoItem/videoItem';
-// console.log(videoItem);
+
 
 function NextVideos ({filterVideos, handleNextVideo}){
     console.log('filtervideo', filterVideos)
@@ -9,7 +9,9 @@ function NextVideos ({filterVideos, handleNextVideo}){
                 <VideoItem
                     key={video.id}
                     title={video.title}
-                    id={video.id}
+                    
+                    channel={video.channel}
+                    image={video.image}
                     handleNextVideo={handleNextVideo} 
                 />
             ))}

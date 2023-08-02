@@ -1,4 +1,4 @@
-// import VideoData from "../../data/videos.json";
+import './videoItem.scss'
 
 function videoItem({title,id, handleNextVideo, image}){
     return(

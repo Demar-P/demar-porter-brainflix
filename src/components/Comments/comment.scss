@@ -1,0 +1,31 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    @include margin(1.5rem,1rem, 1rem, 1rem);
+
+        @include tablet{
+            @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
+            @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
+            };
+
+    &__content {
+
+    }
+
+    &__likes {
+
+    }
+
+    &__name {
+
+    }
+
+    &__title {
+
+    }
+}

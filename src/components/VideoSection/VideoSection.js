@@ -5,8 +5,7 @@ import VideoPlayer from "../videoPlayer/VideoPlayer";
 
 
 const VideoInfo = ({currentVideo, filterVideos, handleNextVideo}) => {
-    // console.log('make sure everything is ok', currentVideo)
-    // console.log("this is my next videos",NextVideos)
+
     return (
         <>
         <div className="videos">
@@ -15,7 +14,7 @@ const VideoInfo = ({currentVideo, filterVideos, handleNextVideo}) => {
         
         <Comments comments={currentVideo.comments} />
         <NextVideos filterVideos={filterVideos} handleNextVideo={handleNextVideo} />
-        console.log("this is my next videos",NextVideos)
+        
         
         </div>
         </>
