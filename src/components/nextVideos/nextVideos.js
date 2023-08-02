@@ -1,31 +1,21 @@
+import VideoItem from '../videoItem/videoItem';
+// console.log(videoItem);
 
-
-const NextVideos = ({filterVideos, handleNextVideo}) =>{
-    if (!filterVideos || !Array.isArray(filterVideos)) {
-        return null;}
-    const elements = filterVideos.map (videos => {
-        console.log('videos:', videos)
-        return(
-            <>
-            <hr />
-            <div className="new-video" onClick={()=> {handleNextVideo(videos)}}>
-                <div className="new-video__img">
-                <img className="next-video__img--item" src={videos.image} alt="" />
-                </div>
-                <div className="next-video__text">
-                    {videos.title}
-                    {videos.channel}
-                </div>
-            </div>
-            </>
-        )
-    })
+function NextVideos ({filterVideos, handleNextVideo}){
+    console.log('filtervideo', filterVideos)
     return(
-        <>
-        {elements}
+        <>  {
+            filterVideos.map((video) => (
+                <VideoItem
+                    key={video.id}
+                    title={video.title}
+                    id={video.id}
+                    handleNextVideo={handleNextVideo} 
+                />
+            ))}
+        
         </>
-    )
-
+    );
 }
 
 export default NextVideos;

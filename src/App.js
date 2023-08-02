@@ -16,6 +16,7 @@ function App() {
     setCurrentVideo(foundVideo);
   }
   
+  // console.log(currentVideo)
 
     const filterVideos = videos.filter(video => video.id );
   return(
