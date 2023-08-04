@@ -1,19 +1,19 @@
 import "./videoDetails.scss"
 
-const videoDetails =({title, channel, timestamp, views, likes, description}) => {
-    return(
+const videoDetails = ({ currentVideo }) => {
+    return (
         <>
-        <div className="video-description">
-        <h1 className="video-description__title">{title}</h1>
-        <div className="video-description__info">
-        <p className="video-description__channel">{channel}</p>
-        <p className="video-description__time">{timestamp}</p>
-        <p className="video-description__views">{views}</p>
-        <p className="video-description__like">{likes}</p>
-        </div>
-        <p className="video-description__description">{description}</p>
-        </div>
-        
+            <div className="video-description">
+                <h1 className="video-description__title">{currentVideo.title}</h1>
+                <div className="video-description__info">
+                    <p className="video-description__channel">{currentVideo.channel}</p>
+                    <p className="video-description__time">{currentVideo.timestamp}</p>
+                    <p className="video-description__views">{currentVideo.views}</p>
+                    <p className="video-description__like">{currentVideo.likes}</p>
+                </div>
+                <p className="video-description__description">{currentVideo.description}</p>
+            </div>
+
         </>
     )
 }

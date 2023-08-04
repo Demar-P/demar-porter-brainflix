@@ -1,29 +1,34 @@
-
-import { useState } from 'react';
 import './App.scss';
 import Header from './components/Header/Header';
 import videos from "./data/videos.json";
 import videoDetails from "./data/video-details.json"
-import VideoInfo from "./components/VideoSection/VideoSection";
+import VideoSection from "./components/VideoSection/VideoSection";
+import { useState } from 'react';
 
 
 function App() {
 
   const [currentVideo, setCurrentVideo] = useState(videoDetails[0]);
 
-  const handleNextvideo = nextVideoID => {
-    const foundVideo = videoDetails.find(video => nextVideoID === video.id)
+  function handleNextvideo(nextVideoID) {
+    const foundVideo = videoDetails.find((video) => {
+      return video.id === nextVideoID
+    })
+    console.log('this is the next video on app.js ', nextVideoID, foundVideo, 'this is the foundVideo')
+
     setCurrentVideo(foundVideo);
   }
-  
-  // console.log(currentVideo)
 
-    const filterVideos = videos.filter(video => video.id !== currentVideo.id);
-  return(
+  const filterVideos = videos.filter((video) => {
+    return currentVideo && video.id !== currentVideo.id;
+  })
+
+
+  return (
     <>
-      <Header />  
-      <VideoInfo currentVideo={currentVideo} filterVideos={filterVideos} handleNextVideo={handleNextvideo} />
-      
+      <Header />
+      <VideoSection currentVideo={currentVideo} filterVideos={filterVideos} handleNextVideo={handleNextvideo} />
+
     </>
   );
 }
