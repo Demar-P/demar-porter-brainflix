@@ -1,11 +1,14 @@
 import "./VideoPlayer.scss";
 
 
-const videoPlayer = ({currentVideo}) => {
-    return(
+const videoPlayer = ({ currentVideo }) => {
+
+    console.log("we are now display", currentVideo.image, "and", currentVideo.id)
+
+    return (
         <>
-            <video className="video__player" src={currentVideo.video} poster={currentVideo.image} controls />
-                
+            <video className="video__player" poster={currentVideo.image} controls />
+
         </>
     )
 }
