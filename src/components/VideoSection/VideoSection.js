@@ -5,7 +5,6 @@ import VideoPlayer from "../videoPlayer/VideoPlayer";
 
 
 const VideoSection = ({ currentVideo, filterVideos, handleNextVideo }) => {
-    console.log('This is the current Video', currentVideo)
     return (
         <>
             <div className="videos">
