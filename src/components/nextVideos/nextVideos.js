@@ -2,7 +2,7 @@ import VideoItem from '../videoItem/videoItem';
 
 
 function NextVideos({ filterVideos, handleNextVideo }) {
-    console.log('filtervideo', filterVideos)
+
     return (
         <>  {
             filterVideos.map((video) => (

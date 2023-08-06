@@ -1,7 +1,7 @@
 import './videoItem.scss'
 
 function videoItem({ title, id, handleNextVideo, image, channel }) {
-    console.log('ID in video is', id)
+
     return (
         <>
             <hr />
