@@ -1,4 +1,5 @@
-import UploadImage from "../../assets/images/Upload-video-preview.jpg"
+import "./UploadPage.scss";
+import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 
 function UploadPage() {
 
@@ -21,8 +22,10 @@ function UploadPage() {
                 <div className="upload__input--button-section" >
                     <button className="upload__input--publish">Publish</button>
                 </div>
+                <div className="upload__input--buton--cancel">
+                    <button className="upload__input--cancel">Cancel</button>
+                </div>
             </form>
-
         </div>
 
     )

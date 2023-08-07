@@ -4,6 +4,7 @@ import NextVideos from "../nextVideos/nextVideos";
 import VideoDetails from "../videoDetails/videoDetails";
 import VideoPlayer from "../videoPlayer/VideoPlayer";
 import axios from "axios";
+import "./VideoSection.scss";
 
 
 const VideoSection = ({ displayVideoId, filteredVideos, api_key }) => {
@@ -33,9 +34,19 @@ const VideoSection = ({ displayVideoId, filteredVideos, api_key }) => {
         <>
             <div className="videos">
                 <VideoPlayer currentVideo={currentVideo} />
-                <VideoDetails currentVideo={currentVideo} />
-                <Comments comments={currentVideo.comments} />
-                <NextVideos displayVideoId={displayVideoId} filteredVideos={filteredVideos} />
+                
+                <article className="article-container">
+                    {/*  article flex , desktop */}
+
+                    <section className="left">
+                        <VideoDetails currentVideo={currentVideo} />
+                        <Comments comments={currentVideo.comments} />
+                    </section>
+
+                    <section className="right">
+                        <NextVideos displayVideoId={displayVideoId} filteredVideos={filteredVideos} />
+                    </section>
+                </article>
 
 
             </div>

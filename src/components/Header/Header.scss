@@ -7,12 +7,19 @@
 .header {
     display: flex;
     flex-direction: column;
-    @include margin(1.5rem,1rem, 1rem, 1rem);
 
-        @include tablet{
-            @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-            @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-            };
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include margin(1.5rem, 1rem, 1rem, 1rem);
+
+    @include tablet {
+        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+    }
+
+    ;
 
 
     &__button {
@@ -23,15 +30,17 @@
         background-color: $brainflix-blue;
         background-repeat: no-repeat;
 
-        
-        
+
+
     }
 
     &__image {
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        @include tablet{
+
+        @include tablet {
+
             height: 2.5rem;
             width: 2.5rem;
         }
@@ -43,7 +52,7 @@
         width: 7.5rem;
         box-sizing: border-box;
         padding: .5rem 0;
-        
+
 
         &--container {
             display: flex;
@@ -60,13 +69,13 @@
         border-radius: .25rem;
         background-color: $alabaster;
         background-size: 1rem;
-        
-    
+
+
     }
 
     &__search-container {
-        display: flex;  
-        flex-direction: row; 
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 }

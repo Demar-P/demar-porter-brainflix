@@ -1,0 +1,24 @@
+.upload {
+
+
+    &__img {}
+
+    &__input {
+        &--buton {}
+
+        &--button-section {}
+
+        &--cancel {}
+
+        &--description {}
+
+        &--publish {}
+    }
+
+    &__subheader {}
+
+    &__title {
+        margin-bottom: 32px;
+        font-family: AvenirBold;
+    }
+}
