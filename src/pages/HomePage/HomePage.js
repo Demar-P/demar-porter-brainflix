@@ -1,6 +1,6 @@
 
 
-import Header from '../../components/Header/Header';
+
 // import videos from "../../data/videos.json";
 // import videoDetails from "../../data/video-details.json"
 import VideoSection from "../../components/VideoSection/VideoSection";
