@@ -4,6 +4,9 @@
 
 .next-video {
     &__img {
+        width: 100%;
+        object-fit: contain;
+
         &--item {}
     }
 

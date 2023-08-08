@@ -7,35 +7,73 @@
 .header {
     display: flex;
     flex-direction: column;
-    @include margin(1.5rem,1rem, 1rem, 1rem);
 
-        @include tablet{
-            @include margin(2.25rem,1.5rem, 1.5rem, 1.5rem);
-            @include padding(2.25rem, 1.5rem,1.5rem,1.5rem);
-            };
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    @include margin(null, 1rem, 1rem, 1rem);
+
+    @include tablet {
+        @include margin(null, 1.5rem, 1.5rem, 1.5rem);
+    
+    }
+
+    ;
+
+    &__button-container {
+        display: flex
+    }
 
     &__button {
         display: flex;
-        width: 100%;
-        height: 3rem;
         background-image: url(../../assets/icons/upload.svg);
-        background-color: $brainflix-blue;
         background-repeat: no-repeat;
+        background-color: $brainflix-blue;
+        height: 7vh;
+        width: 100%;
+        border-radius: .25rem;
+        color: $alabaster;
 
-        
-        
+        @include tablet {
+            height: 7vh;
+            width: 9.375rem;
+        }
+
+
+
     }
 
     &__image {
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        @include tablet{
+
+        @include tablet {
+            display: none;
             height: 2.5rem;
             width: 2.5rem;
         }
 
+        &--desktop {
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                display: flex;
+                height: 2.25rem;
+                width: 2.25rem;
+                border-radius: 50%;
+            }
+
+        }
     }
 
     &__logo {
@@ -43,7 +81,7 @@
         width: 7.5rem;
         box-sizing: border-box;
         padding: .5rem 0;
-        
+
 
         &--container {
             display: flex;
@@ -60,13 +98,19 @@
         border-radius: .25rem;
         background-color: $alabaster;
         background-size: 1rem;
-        
-    
+
+
     }
 
     &__search-container {
-        display: flex;  
-        flex-direction: row; 
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
+    }
+}
+
+.header {
+    &__image {
+        &--desktop {}
     }
 }

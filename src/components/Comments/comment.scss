@@ -1,6 +1,7 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
 
 
 .comment {
@@ -16,24 +17,34 @@
     ;
 
     &__content {
+        font-family: Avenir;
 
-   
         @mixin body-copy-small {
             font-size: .8125rem;
             line-height: 1.125rem;
             font-weight: 700;
 
+            @include body-copy-small;
+
             @include tablet {
-                font-size: .875rem;
-                line-height: 1.375rem;
-                font-weight: 400;
+                @include body-copy-large;
             }
+
         }
     }
 
     &__likes {}
 
-    &__name {}
+    &__name {
+        font-weight: bold;
+        @include body-copy-small;
+
+        @include tablet {
+            font-weight: bold;
+            @include body-copy-large;
+        }
+
+    }
 
     &__title {}
 
@@ -44,6 +55,17 @@
 }
 
 .button {
+    background-color: $brainflix-blue;
+    height: 7vh;
+    width: 100%;
+    border-radius: .25rem;
+    color: $alabaster;
+
+    @include tablet {
+        height: 7vh;
+        width: 9.375rem;
+    }
+
     &__comment {}
 
     &__comment-icon {}
@@ -51,16 +73,33 @@
     &--hidden {}
 }
 
-.comment {}
+
 
 .comments {
     &__form-container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        padding: .75rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 1rem;
+        }
     }
 
-    &__input {}
+    &__input {
+        @include mobile {
+            width: 15rem;
+            height: 2.5rem;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+    }
 
     &__label {}
 }

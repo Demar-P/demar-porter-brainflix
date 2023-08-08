@@ -1,18 +1,17 @@
 import VideoItem from '../videoItem/videoItem';
 
 
-function NextVideos({ filterVideos, handleNextVideo }) {
-    console.log('filtervideo', filterVideos)
+function NextVideos({ filteredVideos, displayVideoId }) {
+
     return (
         <>  {
-            filterVideos.map((video) => (
+            filteredVideos.map((video) => (
                 <VideoItem
                     key={video.id}
                     title={video.title}
                     id={video.id}
                     channel={video.channel}
                     image={video.image}
-                    handleNextVideo={handleNextVideo}
                 />
             ))}
 

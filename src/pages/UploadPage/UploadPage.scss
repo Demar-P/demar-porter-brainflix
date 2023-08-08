@@ -1,0 +1,50 @@
+.upload {
+    * {
+        font-family: Avenir;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__input {
+        &--area {
+
+            width: 15rem;
+            height: 2.5rem;
+        }
+
+        &--textarea {
+            width: 15rem;
+            height: 2.5rem;
+        }
+
+        &--buton {
+            
+        }
+
+        &--button-section {}
+
+        &--cancel {}
+
+        &--description {}
+
+        &--publish {
+
+
+        }
+    }
+
+    &__subheader {}
+
+    &__title {
+        margin-bottom: 2rem;
+        font-family: AvenirBold;
+    }
+}
+
+.upload {
+    &__input {
+        &--textarea {}
+    }
+}
