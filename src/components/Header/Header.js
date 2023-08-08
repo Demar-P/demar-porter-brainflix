@@ -24,8 +24,10 @@ function Header() {
                 </div>
 
                 <Link to="/upload-page">
+                    <div className="header__button-container">
                     <button className="header__button" src={{ uploadButton }}>Upload</button>
-                    <img className="header__image" src={headerImage} alt="" />
+                    <img className="header__image--desktop" src={headerImage} alt="" />
+                    </div>
                 </Link>
             </header>
         </>

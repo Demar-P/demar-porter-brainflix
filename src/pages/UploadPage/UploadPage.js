@@ -11,13 +11,13 @@ function UploadPage() {
             <h4 className="upload__title">TITLE YOUR VIDEO</h4>
             <form>
                 <div className="upload__input" >
-                    <label>TITLE YOUR VIDEO</label>
-                    <input type="text" placeholder="Add a title to your video" />
+                    <label >TITLE YOUR VIDEO</label>
+                    <input className="upload__input--area" type="text" placeholder="Add a title to your video" />
                 </div>
 
                 <div className="upload__input--description">
                     <label>Add A VIDEO DESCRIPTION</label>
-                    <input type="textarea" placeholder="Add a description to your video" />
+                    <input type="textarea" className="upload__input--textarea" placeholder="Add a description to your video" />
                 </div>
                 <div className="upload__input--button-section" >
                     <button className="upload__input--publish">Publish</button>

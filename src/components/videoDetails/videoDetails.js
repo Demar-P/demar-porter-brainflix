@@ -1,6 +1,7 @@
 import "./videoDetails.scss"
 
 const videoDetails = ({ currentVideo }) => {
+    
     return (
         <>
             <div className="video-description">

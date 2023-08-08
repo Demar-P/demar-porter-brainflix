@@ -1,8 +1,7 @@
 
 
 
-// import videos from "../../data/videos.json";
-// import videoDetails from "../../data/video-details.json"
+
 import VideoSection from "../../components/VideoSection/VideoSection";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
