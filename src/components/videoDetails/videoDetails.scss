@@ -1,5 +1,7 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
 
 .video-description {
     display: flex;
@@ -15,9 +17,12 @@
     ;
 
 
-    &__channel {}
+    &__channel {
+        font-weight: bold;
+    }
 
     &__description {
+        font-family: Avenir;
         flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid $mercury;
@@ -50,7 +55,10 @@
 
     &__time {}
 
-    &__title {}
+    &__title {
+        font-family: Avenir;
+        font-size: bold;
+    }
 
     &__views {}
 }

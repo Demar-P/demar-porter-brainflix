@@ -10,8 +10,7 @@ const Comments = ({ comments }) => {
             <form className='comments__form-container'>
                 <label htmlFor="comment" className="comments__label">Join the Conversation</label>
                 <textarea name="comment" id="comment" className="comments__input" placeholder="Add a new comment"></textarea>
-                <button className="button button__comment" type="submit" />
-                <img src={CommentIcon} alt="comment icon" className="button__comment-icon" />Comment
+                <button className="button button__comment" type="submit"><img src={CommentIcon} alt="comment icon" className="button__comment-icon" />Comment</button>
                 <div className="button__comment-icon button--hidden"></div>
             </form>
 
