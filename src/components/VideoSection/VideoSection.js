@@ -7,34 +7,36 @@ import axios from "axios";
 import "./VideoSection.scss";
 
 
-const VideoSection = ({ displayVideoId, filteredVideos, api_key }) => {
-    console.log("THIS is the displayed Id, ", displayVideoId)
+const VideoSection = ({ displayVideoId, filteredVideos, }) => {
+
     const [currentVideo, setCurrentVideo] = useState(null);
 
-    const url = `https://project-2-api.herokuapp.com/videos/${displayVideoId}?api_key=`
+    const url = `http://localhost:8081/videos/${displayVideoId}`
+
+    //const baseurl = localhost
 
     useEffect(() => {
 
         if (displayVideoId === null) return;
-        axios.get(url + api_key)
+        axios.get(url)
             .then(({ data }) => {
                 setCurrentVideo(data)
             })
             .catch(error => {
                 console.log(error)
             })
-    }, [displayVideoId, url, api_key])
+    }, [displayVideoId, url,])
 
 
     if (currentVideo === null) {
-        return <h1>Loading...</h1>
+        return <h2>Loading...</h2>
     }
 
     return (
         <>
             <div className="videos">
                 <VideoPlayer currentVideo={currentVideo} />
-                
+
                 <article className="article-container">
                     {/*  article flex , desktop */}
 

@@ -4,45 +4,67 @@
 
 
 .new-video {
+    font-family: Avenir;
+    text-decoration: none;
     display: flex;
     flex-direction: row;
+    color: $brainflix-black;
+    align-items: center;
+    // width: 100%;
 
-    @include margin(1.5rem, 1rem, 1rem, 1rem);
+
+    // @include margin(1.5rem, 1rem, 1rem, 1rem);
 
     @include tablet {
-        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
-        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        // @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        // @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
 
     ;
 
-    &__img {}
+    &__img {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 1rem;
+    }
 }
 
 .next-video {
     display: flex;
     flex-direction: column;
-    @include margin(1.5rem, 1rem, 1rem, 1rem);
+    background-color: $mercury;
+    // @include margin(1.5rem, 1rem, 1rem, 1rem);
 
     @include tablet {
-        @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
-        @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        // @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
+        // @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
 
     ;
 
     &__img {
         &--item {
+            border-radius: .25rem;
             width: 100%;
         }
     }
 
-    &__text {}
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
 
-    &__channel {}
+    &__channel {
+        display: flex;
+        ;
+    }
 
-    &__title {}
+    &__title {
+        display: flex;
+        font-weight: bold;
+    }
 }
-
-
-
