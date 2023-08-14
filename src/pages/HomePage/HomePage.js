@@ -10,8 +10,8 @@ import axios from "axios";
 
 function HomePage() {
 
-    const url = "https://project-2-api.herokuapp.com/videos?api_key=";
-    const api_key = "e314b07d-ff58-46bc-8d67-ffb94d5b6c05"
+    const url = "http://localhost:8081/videos";
+
 
     let { videoId } = useParams();
     const [videos, setVideos] = useState([]);
@@ -25,12 +25,13 @@ function HomePage() {
     const displayVideoId = videoId !== undefined ? videoId : displayId
 
     useEffect(() => {
-        axios.get(url + api_key)
+        axios.get(url)
             .then(({ data }) => {
                 setVideos(data);
+
             })
             .catch(error => {
-                console.log(error);
+                alert(error);
             })
     }, [])
 
@@ -40,7 +41,7 @@ function HomePage() {
     return (
 
         <>
-            <VideoSection filteredVideos={filteredVideos} displayVideoId={displayVideoId} videos={videos} api_key={api_key} />
+            <VideoSection filteredVideos={filteredVideos} displayVideoId={displayVideoId} videos={videos} />
 
         </>
     );

@@ -14,7 +14,12 @@
         @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
 
-    ;
+    &__profile {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        background-color: $mercury;
+    }
 
     &__content {
         font-family: Avenir;
@@ -36,6 +41,7 @@
     &__likes {}
 
     &__name {
+        font-family: Avenir;
         font-weight: bold;
         @include body-copy-small;
 
@@ -76,6 +82,8 @@
 
 
 .comments {
+    border-bottom: 1px solid $mercury;
+
     &__form-container {
         display: flex;
         flex-direction: column;
