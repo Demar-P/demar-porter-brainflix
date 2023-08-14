@@ -10,11 +10,12 @@
     @include margin(1.5rem, 1rem, 1rem, 1rem);
 
     @include tablet {
+        border-bottom: 1px solid $mercury;
         @include margin(2.25rem, 1.5rem, 1.5rem, 1.5rem);
         @include padding(2.25rem, 1.5rem, 1.5rem, 1.5rem);
     }
 
-    ;
+    
 
 
     &__channel {
@@ -45,20 +46,44 @@
     }
 
     &__info {
+        font-family: Avenir;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         border-bottom: 1px solid $mercury;
+        align-items: center;
     }
 
-    &__like {}
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    &__likes {
+        &__icon {}
+    }
 
     &__time {}
 
     &__title {
         font-family: Avenir;
         font-size: bold;
+        border-bottom: 1px solid $mercury;
     }
 
-    &__views {}
+    &__time {}
+
+    &__views {
+        &__icon {}
+    }
+
+    &__views-container {
+        display: flex;
+    }
+
+    &__likes-container {
+        display: flex;
+    }
 }

@@ -3,7 +3,8 @@ import CommentIcon from "../../assets/icons/add_comment.svg"
 
 
 const Comments = ({ comments }) => {
-
+    
+    
 
     return (
         <div className="comment">
@@ -16,9 +17,12 @@ const Comments = ({ comments }) => {
 
             {comments.map((comment) => (
                 <section key={comment.id} className="comment">
+                    <div className='comment__profile'></div>
+                    <div>
                     <div className='comment__new'>
                         <p className="comment__name">{comment.name}</p>
                         <p className="comment__likes">{comment.timestamp}</p>
+                    </div>
                     </div>
                     <p className="comment__content">{comment.comment}</p>
 

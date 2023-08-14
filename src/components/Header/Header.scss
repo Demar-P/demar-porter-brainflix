@@ -7,23 +7,23 @@
 .header {
     display: flex;
     flex-direction: column;
+    margin: 1.5rem, 1rem, 1rem, 1rem;
 
     @include tablet {
         flex-direction: row;
         justify-content: space-around;
+        margin: 2.25rem, 1.5rem, 1.5rem, 1.5rem;
     }
 
     @include desktop {
         flex-direction: row;
         justify-content: space-around;
+        margin: 2.25rem, 1.5rem, 1.5rem, 1.5rem;
     }
 
-    @include margin(null, 1rem, 1rem, 1rem);
 
-    @include tablet {
-        @include margin(null, 1.5rem, 1.5rem, 1.5rem);
-    
-    }
+
+
 
     ;
 
@@ -98,6 +98,11 @@
         border-radius: .25rem;
         background-color: $alabaster;
         background-size: 1rem;
+
+        @include tablet {
+            height: 2.5rem;
+            width: 15rem;
+        }
 
 
     }

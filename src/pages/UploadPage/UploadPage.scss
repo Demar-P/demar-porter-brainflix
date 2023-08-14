@@ -1,6 +1,15 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+
 .upload {
+    border-top: 1px solid $mercury;
+
     * {
         font-family: Avenir;
+
+
     }
 
     &__img {
@@ -15,36 +24,56 @@
         }
 
         &--textarea {
-            width: 15rem;
-            height: 2.5rem;
+            height: 2.25rem;
+            width: 100%;
+            resize: both;
+
+            @include tablet {
+                height: 2.5rem;
+                width: 15rem;
+                resize: both;
+            }
+
         }
 
-        &--buton {
-            
-        }
+        &--button {}
 
         &--button-section {}
 
-        &--cancel {}
+        &--cancel {
+            background-color: $brainflix-blue;
+            height: 7vh;
+            width: 100%;
+            border-radius: .25rem;
+            color: $alabaster;
+
+            @include tablet {
+                height: 7vh;
+                width: 9.375rem;
+            }
+        }
 
         &--description {}
 
         &--publish {
+            background-color: $brainflix-blue;
+            height: 7vh;
+            width: 100%;
+            border-radius: .25rem;
+            color: $alabaster;
 
-
+            @include tablet {
+                height: 7vh;
+                width: 9.375rem;
+            }
         }
     }
 
     &__subheader {}
 
     &__title {
+
         margin-bottom: 2rem;
         font-family: AvenirBold;
-    }
-}
-
-.upload {
-    &__input {
-        &--textarea {}
     }
 }
