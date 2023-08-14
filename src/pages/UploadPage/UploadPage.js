@@ -3,7 +3,7 @@ import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-
+import publish from '../../assets/icons/publish.svg';
 
 function UploadPage() {
 
@@ -50,9 +50,11 @@ function UploadPage() {
                     <input onChange={handleFormChange} value={formData.description} name="description" type="textarea" className="upload__input--textarea" placeholder="Add a description to your video" />
                 </div>
                 <div className="upload__input--button-section" >
-                    <button className="upload__input--publish" onClick={handleFormSubmit}>Publish</button>
+                    <button className="upload__input--publish" onClick={handleFormSubmit}><img src={publish} alt="publish icon" />Publish</button>
+
                 </div>
                 <div className="upload__input--button--cancel">
+                    
                     <button className="upload__input--cancel">Cancel</button>
                 </div>
             </form>
